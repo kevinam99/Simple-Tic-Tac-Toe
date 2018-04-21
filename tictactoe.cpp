@@ -5,23 +5,34 @@ using namespace std;
 char square[10] = {'o','1','2','3','4','5','6','7','8','9'};
 int whoWon();
 void board();
+void resetBoard();
 
 int main()
 {
 	int player = 1,i,choice;
-	char action;
+	char action, retry='y';
 	cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<"                                            WELCOME TO TIC TAC TOE!                                              ";
 	cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<"                                            LOADING... PLEASE WAIT...                                              "<<endl;
-	for(int i=0;i<999999999;i++)
+		for(int i=0;i<999;i++)
 	{
-		; /*
-		   *
-		   *                 Delay effect  
-		   *
-		   *
-		   */
+		for(int j=0;j<9;j++)
+		{
+			cout<<"/";
+			cout<<"\b";
+			cout<<"\\";
+			cout<<"\b";
+		}
+		 /*
+		  *
+		  *                 Delay effect  
+		  *
+		  *
+		  */
+		   
 	}
 	system("cls");
+while(retry=='y)
+      {
 	do
 	{
 		board();
@@ -49,7 +60,7 @@ int main()
 			square[9] = action;
 		else
 		{
-			cout<<"Invalid move ";
+			cout<<"Invalid move. Try again.";
 			player--;
 			getch();
 		}
@@ -61,6 +72,9 @@ int main()
 		cout<<"Player "<<--player<<" wins ";
 	else
 		cout<<" Draw";
+	cout<<"Would you like to try again? Enter y or n: ";
+	cin>>retry;
+      }
 	getch();
 	return 0;
 }
@@ -118,6 +132,20 @@ void board()
 	cout << "                                                      |     |     " << endl;
 	cout << "                                                   " << square[7] << "  |  " << square[8] << "  |  " << square[9] << endl;
 	cout << "                                                      |     |     " << endl << endl;
+}
+      
+ void resetBoard()
+{
+	square[1]='1';
+	square[2]='2';
+	square[3]='3';
+	square[4]='4';
+	square[5]='5';
+	square[6]='6';
+	square[7]='7';
+	square[8]='8';
+	square[9]='9';
+	
 }
 
 /*******************************************************************
