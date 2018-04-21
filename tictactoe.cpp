@@ -69,13 +69,12 @@ while(retry=='y)
 	}while(i==-1);
 	board();
 	if(i==1)
-		cout<<"Player "<<--player<<" wins ";
+		cout<<"   Player "<<--player<<" wins ";
 	else
 		cout<<" Draw";
-	cout<<"Would you like to try again? Enter y or n: ";
+	cout<<endl<<"Would you like to try again? Enter y or n: ";
 	cin>>retry;
       }
-	getch();
 	return 0;
 }
 /*********************************************
