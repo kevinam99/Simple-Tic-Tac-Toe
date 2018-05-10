@@ -12,14 +12,18 @@ int main()
 	int player = 1,i,choice;
 	char action, retry='y';
 	cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<"                                            WELCOME TO TIC TAC TOE!                                              ";
-	cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<"                                                   LOADING                                           "<<endl;
+	cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<"                                                   LOADING  ";
 		for(int i=0;i<999;i++)
 	{
 		for(int j=0;j<9;j++)
 		{
+			cout<<"\\";
+			cout<<"\b";
+			cout<<"|";
+			cout<<"\b";
 			cout<<"/";
 			cout<<"\b";
-			cout<<"\\";
+			cout<<"|";
 			cout<<"\b";
 		}
 		 /*
